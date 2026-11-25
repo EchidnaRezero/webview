@@ -1,0 +1,40 @@
+# External reference repos (keep guide only)
+reference_repo/*
+!reference_repo/reference_repo_guide.md
+
+# Local secrets & machine-specific config (keep .env.example only)
+local/*
+!local/.env.example
+
+# Logs & temporary files
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+.DS_Store
+Thumbs.db
+
+# Node / Build outputs
+node_modules/
+dist/
+build/
+.vite/
+.cache/
+.remotion/
+coverage/
+
+# Test & Playwright artifacts
+test-results/
+playwright-report/
+blob-report/
+
+# Large media & binary outputs (render outputs, raw papers, large structures)
+out/
+*.mp4
+*.webm
+*.mov
+*.avi
+*.pdf
+*.zip
+*.tar.gz

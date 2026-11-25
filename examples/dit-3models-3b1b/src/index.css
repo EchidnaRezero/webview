@@ -1,0 +1,73 @@
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+:root {
+  --bg-0: #060910;
+  --sem-q: #38bdf8;
+  --sem-k: #f59e0b;
+  --sem-v: #38bdf8;
+  --sem-attn: #2dd4bf;
+  --sem-gate: #f43f5e;
+  --sem-img: #38bdf8;
+  --sem-txt: #f59e0b;
+}
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+    background-color: var(--bg-0);
+    color: #f1f5f9;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    overflow-x: hidden;
+    word-break: keep-all;
+  }
+
+  code, pre, .font-mono {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+.katex {
+  font-size: 1.02em;
+}
+.sem-q, .sem-k, .sem-v, .sem-attn, .sem-gate, .sem-img, .sem-txt {
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0 2px;
+  transition: opacity 0.18s ease, filter 0.18s ease, background-color 0.18s ease;
+}
+.sem-q { color: var(--sem-q); }
+.sem-k { color: var(--sem-k); }
+.sem-v { color: var(--sem-v); }
+.sem-attn { color: var(--sem-attn); }
+.sem-gate { color: var(--sem-gate); }
+.sem-img { color: var(--sem-img); }
+.sem-txt { color: var(--sem-txt); }
+
+/* Active term spotlight inside KaTeX formula */
+.formula-sync[data-active-term] .sem-q,
+.formula-sync[data-active-term] .sem-k,
+.formula-sync[data-active-term] .sem-v,
+.formula-sync[data-active-term] .sem-attn,
+.formula-sync[data-active-term] .sem-gate,
+.formula-sync[data-active-term] .sem-img,
+.formula-sync[data-active-term] .sem-txt {
+  opacity: 0.42;
+}
+
+.formula-sync[data-active-term="q"] .sem-q,
+.formula-sync[data-active-term="k"] .sem-k,
+.formula-sync[data-active-term="v"] .sem-v,
+.formula-sync[data-active-term="attn"] .sem-attn,
+.formula-sync[data-active-term="gate"] .sem-gate,
+.formula-sync[data-active-term="img"] .sem-img,
+.formula-sync[data-active-term="txt"] .sem-txt {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.09);
+  filter: drop-shadow(0 0 8px currentColor);
+}

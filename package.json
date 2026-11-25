@@ -1,0 +1,29 @@
+{
+  "name": "motion-graphic",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:dit": "vite examples/dit-3models-3b1b --config examples/dit-3models-3b1b/vite.config.ts",
+    "build:dit": "vite build examples/dit-3models-3b1b --config examples/dit-3models-3b1b/vite.config.ts",
+    "preview:dit": "vite preview examples/dit-3models-3b1b --config examples/dit-3models-3b1b/vite.config.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "katex": "^0.16.22",
+    "lucide-react": "^0.511.0",
+    "motion": "^12.15.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.8",
+    "@types/katex": "^0.16.7",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.5",
+    "@vitejs/plugin-react": "^4.5.2",
+    "tailwindcss": "^4.1.8",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}
