@@ -11,9 +11,10 @@ export const PALETTE = {
   muted: '#64748b',
 
   // Strictly 3 semantic colors + 1 subtle warning/gate accent
-  img: '#38bdf8',       // Cyan-Sky: Image / Latent / Query
+  // Token modality colors (role q/k/v is indicated by glyphs, not conflated with color)
+  img: '#38bdf8',       // Cyan-Sky: Image / Latent tokens
   imgDim: 'rgba(56, 189, 248, 0.16)',
-  txt: '#f59e0b',       // Amber: Text / Prompt / Key
+  txt: '#f59e0b',       // Amber: Text / Prompt / ctx tokens
   txtDim: 'rgba(245, 158, 11, 0.16)',
   attn: '#2dd4bf',      // Teal: Attention / XAI / Output
   attnDim: 'rgba(45, 212, 191, 0.18)',

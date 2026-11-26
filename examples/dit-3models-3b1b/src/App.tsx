@@ -158,13 +158,16 @@ export default function App() {
 
         <div className="hidden items-center gap-3 text-[11px] text-slate-400 lg:flex">
           <span className="flex items-center gap-1.5">
-            <span className="h-2 w-2 rounded-full bg-[#38bdf8]" /> Image / Q
+            <span className="h-2 w-2 rounded-full bg-[#38bdf8]" /> Image 토큰
           </span>
           <span className="flex items-center gap-1.5">
-            <span className="h-2 w-2 rounded-full bg-[#f59e0b]" /> Text / K
+            <span className="h-2 w-2 rounded-full bg-[#f59e0b]" /> Text 토큰
           </span>
           <span className="flex items-center gap-1.5">
             <span className="h-2 w-2 rounded-full bg-[#2dd4bf]" /> Attention / XAI
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="h-2 w-2 rounded-full bg-[#f43f5e]" /> Gate / PAD
           </span>
         </div>
       </header>
@@ -235,8 +238,9 @@ export default function App() {
             </label>
 
             {modelId === 'krea2' && activeZoom !== 'macro' && (
-              <label className="flex items-center gap-2 text-rose-300">
-                <span className="font-mono">σ(Wg·h)</span>
+              <label className="flex items-center gap-2 text-rose-300" title="선택한 단일 query 패치의 채널 출력 게이트 예시 값">
+                <span className="font-mono">σ(Wg·hᵢ)</span>
+                <span className="hidden text-[10px] text-rose-300/70 sm:inline">(단일 query 예시)</span>
                 <input
                   type="range"
                   min={0.05}
